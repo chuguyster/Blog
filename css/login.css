@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster|Roboto');
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto",sans-serif;
+    color: #222;
+}
+body{
+   background-image: url("../images/small_background.jpg");
+    background-color:#fbf9fa;
+    background-repeat: no-repeat;
+    background-size: cover, contain;
+  
+}
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: "Roboto",sans-serif;
+    color: #222;
+}
+.header{
+    background-color: #339966;
+}
+.navbar{
+    padding: .2rem;
+    color: #fff;
+}
+.navbar-nav li{
+    padding-right: 20px;
+}
+#menu{
+    color: #fff;
+}
+.nav-link{
+    font-size: 1em !important;
+}
+.padding{
+    padding-bottom: 2rem;
+}
+hr{
+    border-top: solid 2px #996633;
+    width: 95%;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+}
+.logo-text{
+    font-family: "Lobster", sans-serif;
+}
+.form-container{
+    background-color:#FCF9FA;
+    border: 0px solid #fff;
+    padding: 50px 60px;
+    margin-top: 20vh;
+    -webkit-box-shadow: -1px -5px 26px 11px rgba(208,224,220,1);
+    -moz-box-shadow: -1px -5px 26px 11px rgba(208,224,220,1);
+    box-shadow: -1px -5px 26px 11px rgba(208,224,220,1);
+
+}
+.btn-clr{
+    background-color: #4134bd;
+}

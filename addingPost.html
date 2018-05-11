@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+    <title>Создать запись</title>
+    <meta name="description" content="blog content">
+    <meta name='viewport' content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type ="text/css" href="css/addingPost.css">
+    <link rel="stylesheet" type ="text/css" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type ="text/css" href="summernote-0.8.9-dist\dist\summernote-bs4.css">
+    <link rel="stylesheet" href="css/fontawesome-all.css">
+    <link rel="stylesheet" href="css\jquery.datetimepicker.min.css">
+    <link href="images/icon.ico" rel="shortcut icon" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="summernote-0.8.9-dist\dist\summernote-bs4.js"></script>
+    <script src="js\jquery.datetimepicker.full.js"></script>
+
+
+</head>
+<body>
+     <!--Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div class="container-fluid header">
+            <a class="navbar-brand logo-text" href="#">Catching the dream</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" id="menu" href="index.html">Главная</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" id="menu" href="#">Контакты</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" id="menu" href="#">О&nbsp;нас</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" id="menu" href="#">Категории</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" id="menu" href="#">Поиск</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link disabled" id="menu" href="addingPost.html">Опубликовать</a></li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="login.html">Войти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container-fluid bg">
+
+    <div class="row">
+       <!--<div class="col-md-4 col-sm-4 col-xs-12"></div>-->
+        <div class="col-md-8">
+            <form class="form-container">
+                <h1>Добавить новую запись</h1>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Название</label>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Введите название" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text date" for="inputGroupSelect01">Дата</label>
+
+
+                    </div>
+                    <input type="text" class="form-control" id="datetime">
+                    <script>
+                        $.datetimepicker.setLocale('ru');
+                        $("#datetime").datetimepicker({
+                            buttonImageOnly: true,
+                            format:'d.m.Y',
+                            timepicker:false,
+                            lang:"ru",
+                        });
+                    </script>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Категория</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>Выбрать...</option>
+                        <option value="1">Семья</option>
+                        <option value="2">Природа</option>
+                        <option value="3">Еда</option>
+                        <option value="3">Путешествия</option>
+                        <option value="3">Ни о чем</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">Рисунок</label>
+                    </div>
+                    <div class="input-group-append labels">
+                        <button class="btn btn-outline-secondary form-inline" type="button">Выбрать файл</button>
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text test" for="inputGroupSelect01">Комментарии</label>
+                            <div class="input-group-text check_box">
+                            <input type="checkbox" aria-label="Checkbox for following text input">
+                        </div>
+                    </div>
+                </div>
+                <!-- тут добавить редактор WYSIWG-->
+                <div id="summernote"></div>
+                <script>
+                    $('#summernote').summernote({
+                        placeholder: 'Начните свою историю',
+                        tabsize: 2,
+                        height: 400
+                    });
+                </script>
+
+                <button type="button" class="btn btn-success edit-btn">Опубликовать</button>
+                <button type="button" class="btn btn-secondary btn-clr edit-btn">Отмена</button>
+            </form>
+
+        </div>
+        <div class="col-4"></div>
+
+    </div>
+</div>
+
+</body>
+</html>
