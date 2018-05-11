@@ -42,6 +42,9 @@ hr{
     width: 55px;
     height: 40px;
 }
+.social{
+    background-color: #6351ce;  
+}
 a>i{
     color: #fff;
     margin-right: 10px;
