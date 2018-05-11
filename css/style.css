@@ -42,10 +42,7 @@ hr{
     width: 55px;
     height: 40px;
 }
-footer{
-    color:#fff;
-}
-.footer-links:hover{
+a>i{
     color: #fff;
-    text-decoration: none;
+    margin-right: 10px;
 }

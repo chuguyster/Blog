@@ -57,5 +57,9 @@ hr{
 
 }
 .btn-clr{
-    background-color: #4134bd;
+    background-color: #675eb4;
+    border-color: #4134bd;
+}
+.btn-clr:hover{
+    background-color: #339966;
 }
